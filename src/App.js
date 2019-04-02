@@ -10,22 +10,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={venomLogo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <main>
+         <div>
+           <div className='container'>
+             <div className='item'><h2>Black Mirror</h2></div>
+             <div className='item'><h2>Man in Black</h2></div>
+             <div className='item'><h2>Star Wars</h2></div>
+           </div>
+           <div className='container'>
+             <div className='item'><h2>Black Mirror</h2></div>
+             <div className='item'><h2>Man in Black</h2></div>
+             <div className='item'><h2>Star Wars</h2></div>
+           </div>
+         </div>
+       </main>
+       </div>
+    );  
+ 
   }
 }
 
