@@ -14,13 +14,13 @@ class App extends Component {
          <div>
            <div className='container'>
              <div className='item'><h2>Black Mirror</h2></div>
+             <div className='item'><h2>Game of Thrones</h2></div>
              <div className='item'><h2>Man in Black</h2></div>
-             <div className='item'><h2>Star Wars</h2></div>
            </div>
            <div className='container'>
-             <div className='item'><h2>Black Mirror</h2></div>
-             <div className='item'><h2>Man in Black</h2></div>
-             <div className='item'><h2>Star Wars</h2></div>
+             <div className='item'><h2>Star Wors</h2></div>
+             <div className='item'><h2>The Walking Dead</h2></div>
+             <div className='item'><h2>Venom</h2></div>
            </div>
          </div>
        </main>

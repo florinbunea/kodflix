@@ -28,7 +28,7 @@ img{
   color: #61dafb;
 }
 
-container {
+.container {
   display: flex;
  
  }
