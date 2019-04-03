@@ -35,7 +35,7 @@ img{
  
 .item {
   flex : 1;
-  padding: 30px;
+  padding: 10px;
   border: 1px solid black;
   position: relative;
  }
@@ -46,7 +46,7 @@ position: absolute;
 bottom: 0;
 left: 0;
 width: 100%;
-background-color: greenyellow;
+background-color: grey;
 opacity: .5;  
  }
 

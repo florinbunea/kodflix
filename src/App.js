@@ -17,13 +17,13 @@ class App extends Component {
           <div className='item'>
             <img src={BlackMirror} alt='Black Mirror.jpg' />
             <div className='overlay'>
-              <h1>BlackMirror</h1>
+              <h1>Black Mirror</h1>
             </div>
           </div>
           <div className='item'>
             <img src={GameofThornes} alt='Game Of Thrones.jpg' />
             <div className='overlay'>
-              <h1>GameofThrones</h1>
+              <h1>Game of Thrones</h1>
             </div>
           </div>
           <div className='item'>
