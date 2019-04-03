@@ -11,7 +11,7 @@ img{
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
-}
+ }
 
 .App-header {
   background-color: #282c34;
@@ -22,11 +22,11 @@ img{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+ }
 
 .App-link {
   color: #61dafb;
-}
+ }
 
 .container {
   display: flex;
@@ -36,22 +36,24 @@ img{
 .item {
   flex : 1;
   padding: 10px;
-  border: 1px solid black;
   position: relative;
+  border: 1px solid black;
+  overflow: hidden;
  }
 
 .overlay {
-display: none;
+transition: bottom ease 1s;
 position: absolute;
-bottom: 0;
+bottom: -100px;
 left: 0;
 width: 100%;
-background-color: grey;
-opacity: .5;  
+opacity: 0.6;
+background-color: grey;  
  }
 
 .item:hover .overlay{
-   display: block;
+   opacity: .6;
+   bottom: 0;
  }
 
  @media only screen and (max-width: 600px) {
@@ -59,4 +61,4 @@ opacity: .5;
   .container {
     flex-direction: column;
   }
- }
+}
