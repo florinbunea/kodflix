@@ -29,12 +29,15 @@ img{
  }
 
 .container {
-  display: flex;
- 
- }
+ /* display: flex;
+  flex-wrap: wrap;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
  
 .item {
-  flex : 1;
+ /* flex : 1;
+  flex-basis: 120px;*/
   padding: 10px;
   position: relative;
   border: 1px solid black;
@@ -55,10 +58,3 @@ background-color: grey;
    opacity: .6;
    bottom: 0;
  }
-
- @media only screen and (max-width: 600px) {
-  
-  .container {
-    flex-direction: column;
-  }
-}
