@@ -11,14 +11,14 @@ export default function Gallery() {
     return (
       <div>
         <div className='container'>
-          <TvShow name='Black Mirror' logo={BlackMirror} />
-          <TvShow name='Game of Thrones' logo={GameofThrones} />
-          <TvShow name='Men in Black' logo={MeninBlack} />
+          <TvShow  id='Black Mirror' name='Black Mirror' logo={BlackMirror} />
+          <TvShow id='Game of Thrones' name='Game of Thrones' logo={GameofThrones} />
+          <TvShow id ='Men in Black' name='Men in Black' logo={MeninBlack} />
         </div>
         <div className='container'>
-          <TvShow name='Star Wars' logo={StarWars} />
-          <TvShow name='The Walking Dead' logo={TheWalkingDead} />
-          <TvShow name='Venom' logo={Venom} />
+          <TvShow  id='Star Wars'name='Star Wars' logo={StarWars} />
+          <TvShow id='The Walking Dead' name='The Walking Dead' logo={TheWalkingDead} />
+          <TvShow id= 'Venom' name='Venom' logo={Venom} />
         </div>
       </div>
     );
