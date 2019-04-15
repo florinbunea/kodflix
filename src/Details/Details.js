@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getTvshow from './Gallery-get';
-
+import getTvshow from '../Gallery-get';
+import './Details.css';
 
 export default class Details extends Component {
 
@@ -24,8 +24,17 @@ export default class Details extends Component {
             return <Redirect to='/not-found' />;
         } else {
             return (
-                <div>
+                <div className='Details'>
                     <h1>{this.state.tvShow.name}</h1>
+                    <div className='content'>
+                        <div className='text'>
+                            {this.state.tvShow.details}<div>
+                                <img className='image'
+                                    src={this.state.tvShow.logo}
+                                    alt={this.state.tvShow.name} /></div>
+                        </div>
+                    </div>
+
                     <Link to='/'>Back to home page</Link>
                 </div>
             );

@@ -1,0 +1,16 @@
+.Details .content {
+    display: flex, wrap 
+}
+
+.Details .content .text,
+.Details .content .image {
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .Details .content{
+        flex-direction: column;
+    }
+  }
