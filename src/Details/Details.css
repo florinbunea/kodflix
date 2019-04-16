@@ -1,11 +1,30 @@
-.Details .content {
-    display: flex, wrap 
+.Details {
+    background: black;
 }
 
-.Details .content .text,
-.Details .content .image {
-    padding: 10px;
+.Details .title {
+    color: white;
+    padding-top: 50px;
 }
+
+.Details .content {
+    display: flex;
+}
+
+.Details .content .text {
+    flex-direction: inherit;
+    width: 500px;
+    height: 200px;
+    color: white;
+    margin: auto;
+}
+.Details .content .image {
+    flex-direction: column;
+    padding: 20px 10px 40px ;
+    width: 35%;
+    height: 25%;
+    margin: auto;
+} 
 
 
 @media only screen and (max-width: 600px) {

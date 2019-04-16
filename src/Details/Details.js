@@ -25,17 +25,16 @@ export default class Details extends Component {
         } else {
             return (
                 <div className='Details'>
-                    <h1>{this.state.tvShow.name}</h1>
+                    <h1 className='title'>{this.state.tvShow.name}</h1>
                     <div className='content'>
-                        <div className='text'>
-                            {this.state.tvShow.details}<div>
-                                <img className='image'
-                                    src={this.state.tvShow.logo}
-                                    alt={this.state.tvShow.name} /></div>
-                        </div>
+                        <h2 className='text'>
+                            {this.state.tvShow.details}
+                        </h2>
+                        <img className='image'
+                            src={this.state.tvShow.logo}
+                            alt={this.state.tvShow.name} />
                     </div>
-
-                    <Link to='/'>Back to home page</Link>
+                    <Link to='/'><h1>Home Page</h1></Link>
                 </div>
             );
         }
