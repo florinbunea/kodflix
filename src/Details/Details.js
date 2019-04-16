@@ -27,14 +27,14 @@ export default class Details extends Component {
                 <div className='Details'>
                     <h1 className='title'>{this.state.tvShow.name}</h1>
                     <div className='content'>
-                        <h2 className='text'>
+                        <h3 className='text'>
                             {this.state.tvShow.details}
-                        </h2>
+                        </h3>
                         <img className='image'
                             src={this.state.tvShow.logo}
                             alt={this.state.tvShow.name} />
                     </div>
-                    <Link to='/'><h1>Home Page</h1></Link>
+                    <Link to='/'><h1 className='return'>Home Page</h1></Link>
                 </div>
             );
         }
