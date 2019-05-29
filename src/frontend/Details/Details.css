@@ -1,27 +1,27 @@
-.Details {
+.details {
     background: black;
 }
 
-.Details .title {
+.details h1 {
     color: white;
     padding-top: 50px;
 }
 
-.Details .return{
+.details .return{
     color: white;
 }
-.Details .content {
+.details .content {
     display: flex;
 }
 
-.Details .content .text {
+.details .content .text {
     flex-direction: inherit;
     width: 500px;
     height: 200px;
-    color: white;
+    color: whitesmoke;
     margin: auto;
 }
-.Details .content .image {
+.details .content .cover {
     flex-direction: column;
     padding: 20px 10px 40px ;
     width: 45%;
@@ -32,7 +32,7 @@
 
 @media only screen and (max-width: 600px) {
 
-    .Details .content{
+    .details .content{
         flex-direction: column;
     }
   }

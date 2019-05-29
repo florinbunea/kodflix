@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import getTvshow from '../Gallery-get';
+// import getTvshow from '../Gallery-get';
 import './Details.css';
 
 export default class Details extends Component {
@@ -9,34 +9,50 @@ export default class Details extends Component {
     constructor() {
         super();
         this.state = {
-            tvShow: {}
+            show: {}
         };
     }
     componentDidMount() {
-        let tvshowId = this.props.match.params.tvshowId;
-        let tvShow = getTvshow()
-            .find((tvShow) => tvShow.id === tvshowId);
-        this.setState({ tvShow });
+        fetch('/rest/shows')
+            .then(response => response.json())
+            .then(shows => {
+                console.log('inside cpdm is', shows)
+                let showId = this.props.match.params.tvshowId
+                let show = shows.find(show => show.id === showId);
+                this.setState({ show });
+            });
     }
 
     render() {
-        if (this.state.tvShow === undefined) {
-            return <Redirect to='/not-found' />;
+        let show = this.state.show;
+        console.log('the show is truthy', show)
+        if (show) {
+            return show.id ?
+                <DetailsContent show={show} /> :
+                <div />
         } else {
-            return (
-                <div className='Details'>
-                    <h1 className='title'>{this.state.tvShow.name}</h1>
-                    <div className='content'>
-                        <h3 className='text'>
-                            {this.state.tvShow.details}
-                        </h3>
-                        <img className='image'
-                            src={this.state.tvShow.logo}
-                            alt={this.state.tvShow.name} />
-                    </div>
-                    <Link to='/'><h1 className='return'>Home Page</h1></Link>
-                </div>
-            );
+            return <Redirect to='./not-found' />
         }
     }
-}    
+}
+
+function DetailsContent({ show }) {
+    console.log(show)
+
+    return (
+        <div className='details' >
+            <h1>{show.name}</h1>
+            <div className='content'>
+                <div className='text'>
+                    {show.details}
+                </div>
+                <div className='cover'>
+                    <img
+                        src={require(`../common/images/${show.id}.jpg`)}
+                        alt={show.name} />
+                </div>
+            </div>
+            <Link to='/'><h1 className='return'>Back Home Page</h1></Link>
+        </div>
+    )
+}  
